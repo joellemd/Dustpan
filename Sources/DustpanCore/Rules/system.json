@@ -1,0 +1,13 @@
+[
+  {
+    "id": "old-user-logs",
+    "name": "Old logs",
+    "category": "system",
+    "safety": "safe",
+    "summary": "App log files and folders not written to for 30 days or more.",
+    "afterEffect": "Nothing to redo.",
+    "paths": ["~/Library/Logs"],
+    "mode": "children",
+    "minAgeDays": 30
+  }
+]

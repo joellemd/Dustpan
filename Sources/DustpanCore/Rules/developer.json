@@ -1,0 +1,146 @@
+[
+  {
+    "id": "xcode-derived-data",
+    "name": "Xcode DerivedData",
+    "category": "xcode",
+    "safety": "safe",
+    "summary": "Build products and indexes Xcode keeps for each project.",
+    "afterEffect": "The next build of each project starts from scratch and takes longer.",
+    "paths": ["~/Library/Developer/Xcode/DerivedData"],
+    "mode": "children"
+  },
+  {
+    "id": "xcode-device-support",
+    "name": "Xcode device support",
+    "category": "xcode",
+    "safety": "safe",
+    "summary": "Debug symbols copied from devices you have connected.",
+    "afterEffect": "Xcode copies them again the next time you connect that device.",
+    "paths": [
+      "~/Library/Developer/Xcode/iOS DeviceSupport",
+      "~/Library/Developer/Xcode/watchOS DeviceSupport",
+      "~/Library/Developer/Xcode/tvOS DeviceSupport"
+    ],
+    "mode": "children"
+  },
+  {
+    "id": "simulator-caches",
+    "name": "Simulator caches",
+    "category": "xcode",
+    "safety": "safe",
+    "summary": "Shared caches used by the iOS simulators.",
+    "afterEffect": "Simulators take longer to boot the first time.",
+    "paths": ["~/Library/Developer/CoreSimulator/Caches"],
+    "mode": "children"
+  },
+  {
+    "id": "xcode-archives",
+    "name": "Xcode archives",
+    "category": "xcode",
+    "safety": "review",
+    "summary": "Archived app builds, including the debug symbols for versions you shipped.",
+    "afterEffect": "You can no longer symbolicate crash reports for those builds or re-export them.",
+    "paths": ["~/Library/Developer/Xcode/Archives"],
+    "mode": "children"
+  },
+  {
+    "id": "swiftpm-cache",
+    "name": "Swift Package Manager cache",
+    "category": "packages",
+    "safety": "safe",
+    "summary": "Downloaded Swift package repositories.",
+    "afterEffect": "Packages download again on the next resolve. Needs a connection.",
+    "paths": ["~/Library/Caches/org.swift.swiftpm"],
+    "mode": "self"
+  },
+  {
+    "id": "cocoapods-cache",
+    "name": "CocoaPods cache",
+    "category": "packages",
+    "safety": "safe",
+    "summary": "Downloaded pods.",
+    "afterEffect": "Pods download again on the next pod install. Needs a connection.",
+    "paths": ["~/Library/Caches/CocoaPods"],
+    "mode": "self"
+  },
+  {
+    "id": "npm-cache",
+    "name": "npm cache",
+    "category": "packages",
+    "safety": "safe",
+    "summary": "Downloaded npm packages.",
+    "afterEffect": "Packages download again on the next install. Needs a connection.",
+    "paths": ["~/.npm/_cacache"],
+    "mode": "self"
+  },
+  {
+    "id": "yarn-cache",
+    "name": "Yarn cache",
+    "category": "packages",
+    "safety": "safe",
+    "summary": "Downloaded Yarn packages.",
+    "afterEffect": "Packages download again on the next install. Needs a connection.",
+    "paths": ["~/Library/Caches/Yarn"],
+    "mode": "self"
+  },
+  {
+    "id": "pnpm-store",
+    "name": "pnpm store",
+    "category": "packages",
+    "safety": "safe",
+    "summary": "Shared package store used by pnpm projects.",
+    "afterEffect": "Packages download again on the next install. Needs a connection.",
+    "paths": ["~/Library/pnpm/store"],
+    "mode": "self"
+  },
+  {
+    "id": "gradle-caches",
+    "name": "Gradle caches",
+    "category": "packages",
+    "safety": "safe",
+    "summary": "Downloaded dependencies and build caches for Gradle and Android builds.",
+    "afterEffect": "Dependencies download again and the next build is slower. Needs a connection.",
+    "paths": ["~/.gradle/caches"],
+    "mode": "self"
+  },
+  {
+    "id": "homebrew-cache",
+    "name": "Homebrew downloads",
+    "category": "packages",
+    "safety": "safe",
+    "summary": "Installers Homebrew downloaded for things already installed.",
+    "afterEffect": "Nothing to redo. Installed tools keep working.",
+    "paths": ["~/Library/Caches/Homebrew"],
+    "mode": "self"
+  },
+  {
+    "id": "pub-cache",
+    "name": "Dart and Flutter package cache",
+    "category": "packages",
+    "safety": "safe",
+    "summary": "Downloaded pub packages.",
+    "afterEffect": "Packages download again on the next pub get. Needs a connection.",
+    "paths": ["~/.pub-cache/hosted"],
+    "mode": "self"
+  },
+  {
+    "id": "cargo-registry-cache",
+    "name": "Cargo registry cache",
+    "category": "packages",
+    "safety": "safe",
+    "summary": "Downloaded Rust crate archives.",
+    "afterEffect": "Crates download again on the next build. Needs a connection.",
+    "paths": ["~/.cargo/registry/cache"],
+    "mode": "self"
+  },
+  {
+    "id": "go-build-cache",
+    "name": "Go build cache",
+    "category": "packages",
+    "safety": "safe",
+    "summary": "Compiled packages cached by the Go toolchain.",
+    "afterEffect": "The next Go build recompiles everything and takes longer.",
+    "paths": ["~/Library/Caches/go-build"],
+    "mode": "self"
+  }
+]
