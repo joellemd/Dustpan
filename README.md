@@ -4,6 +4,10 @@ A free, open-source Mac app that finds the storage your tools left behind and le
 
 > Status: early. It runs from source; there is no signed app download yet.
 
+<img width="1119" height="652" alt="Screenshot 2026-11-17 at 12 13 19 AM" src="https://github.com/user-attachments/assets/fe217f78-cc07-4a63-b390-9c685d2406f0" />
+<img width="1119" height="652" alt="Screenshot 2026-11-17 at 12 13 29 AM" src="https://github.com/user-attachments/assets/43941c94-5bb1-4820-813f-131cda262417" />
+
+
 ## What it does
 
 - **Developer caches.** Xcode DerivedData, device support, simulator caches, archives, and the caches of SwiftPM, CocoaPods, npm, Yarn, pnpm, Gradle, Homebrew, pub, Cargo and Go.
